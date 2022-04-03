@@ -20,11 +20,11 @@
 
   --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
   --first-color-alt: hsl(var(--first-hue), var(--sat), 68%); /* -4% */
-  --title-color: hsl(var(--second-hue), 15%, 95%);
-  --text-color: hsl(var(--second-hue), 8%, 75%);
+  --title-color: hsl(var(--second-hue), 15%, 15%);
+  --text-color: hsl(var(--second-hue), 8%, 35%);
   --text-color-light: hsl(var(--second-hue), 4%, 55%);
-  --body-color: hsl(var(--second-hue), 48%, 8%);
-  --container-color: hsl(var(--second-hue), 32%, 12%);
+  --body-color: hsl(var(--second-hue), 48%, 99%);
+  --container-color: #fff;
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -226,7 +226,7 @@ body.light-theme {
 .section__subtitle {
   display: block;
   font-size: var(--smaller-font-size);
-  color: var(--text-color-light);
+  color: var(--text-color);
 }
 
 /*=============== HEADER & NAV===============*/
@@ -260,7 +260,7 @@ body.light-theme {
 .nav__menu {
   position: fixed;
   bottom: 1rem;
-  background-color: hsl(var(--second-hue), 32%, 12%, 0.8);
+  background-color: hsla(var(--second-hue), 32%, 90%, 0.8);
   width: 90%;
   border-radius: 4rem;
   padding: 1rem 2.25rem;
@@ -296,7 +296,7 @@ body.light-theme {
 /* Change background header */
 
 .scroll-header {
-  box-shadow: 0 4px 4px hsla(0, 0, 4%, 0.3);
+  box-shadow: 0 2px 4px hsla(0, 0%, 1%, 0.1);
 }
 
 /*=============== HOME ===============*/
@@ -375,7 +375,8 @@ body.light-theme {
 .home__social-link {
   width: max-content;
   background-color: var(--container-color);
-  color: var(--first-color);
+  box-shadow: 0 2px 8px hsla(var(--second-hue), 48%, 8%, 0.1);
+  color: var(--title-color);
   padding: 0.25rem;
   border-radius: 0.25rem;
   display: flex;
@@ -392,12 +393,12 @@ body.light-theme {
   content: "";
   width: 32px;
   height: 2px;
-  background-color: var(--first-color);
+  background-color: var(--title-color);
   transform: rotate(90deg) translate(16px, 3px);
 }
 
 .home__scroll {
-  color: var(--first-color);
+  color: var(--title-color);
   right: -1.5rem;
   bottom: 4rem;
   display: grid;
@@ -418,7 +419,7 @@ body.light-theme {
 .button {
   display: inline-block;
   background-color: var(--first-color);
-  color: var(--body-color);
+  color: var(--title-color);
   padding: 0.75rem 1rem;
   border-radius: 0.5rem;
   font-weight: var(--font-medium);
@@ -427,7 +428,7 @@ body.light-theme {
 
 .button:hover {
   background-color: var(--first-color-alt);
-  color: var(--body-color);
+  color: var(--title-color);
 }
 
 .button--ghost {
@@ -460,6 +461,7 @@ body.light-theme {
 
 .about__box {
   background-color: var(--container-color);
+  box-shadow: 0 2px 8px hsla(var(--second-hue), 48%, 8%, 0.1);
   border-radius: 0.75rem;
   padding: 0.75rem 0.5rem;
 }
@@ -491,6 +493,7 @@ body.light-theme {
 
 .skills__content {
   background-color: var(--container-color);
+  box-shadow: 0 2px 16px hsla(var(--second-hue), 48%, 8%, 0.1);
   padding: 1.5rem;
   border-radius: 1.25rem;
 }
@@ -544,6 +547,7 @@ body.light-theme {
 
 .services__card {
   background-color: var(--container-color);
+  box-shadow: 0 2px 16px hsla(var(--second-hue), 48%, 8%, 0.1);
   padding: 3rem 1.5rem 1.5rem;
   border-radius: 1rem;
 }
@@ -667,6 +671,7 @@ body.light-theme {
 
 .work__card {
   background-color: var(--container-color);
+  box-shadow: 0 2px 16px hsla(var(--second-hue), 48%, 8%, 0.1);
   padding: 1rem;
   border-radius: 1rem;
 }
@@ -703,12 +708,13 @@ body.light-theme {
 /* Active item work*/
 .active-work {
   background-color: var(--first-color);
-  color: var(--body-color);
+  color: var(--title-color);
 }
 
 /*=============== TESTIMONIAL ===============*/
 .testimonial__card {
   background-color: var(--container-color);
+  box-shadow: 0 2px 16px hsla(var(--second-hue), 48%, 8%, 0.1);
   padding: 1.25rem 1.5rem;
   border-radius: 1.5rem;
   margin-bottom: 3rem;
@@ -758,6 +764,7 @@ body.light-theme {
 
 .contact__card {
   background-color: var(--container-color);
+  box-shadow: 0 2px 16px hsla(var(--second-hue), 48%, 8%, 0.1);
   padding: 1rem;
   border-radius: 0.75rem;
   text-align: center;
@@ -851,7 +858,7 @@ body.light-theme {
 
 .footer__title,
 .footer__link {
-  color: var(--body-color);
+  color: var(--title-color);
 }
 
 .footer__title {
@@ -873,7 +880,7 @@ body.light-theme {
 }
 
 .footer__social-link {
-  background-color: var(--body-color);
+  background-color: var(--title-color);
   color: var(--first-color);
   padding: 0.25rem;
   border-radius: 0.25rem;
@@ -884,7 +891,7 @@ body.light-theme {
 .footer__copy {
   display: block;
   margin-top: 4.5rem;
-  color: var(--container-color);
+  color: var(--title-color);
   text-align: center;
   font-size: var(--small-font-size);
 }
@@ -893,16 +900,16 @@ body.light-theme {
 ::-webkit-scrollbar {
   width: 0.6rem;
   border-radius: 0.5rem;
-  background-color: hsl(var(--second-hue), 8%, 38%);
+  background-color: hsl(var(--second-hue), 8%, 66%);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: hsl(var(--second-hue), 8%, 26%);
+  background-color: hsl(var(--second-hue), 8%, 54%);
   border-radius: 0.5rem;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: hsl(var(--second-hue), 8%, 20%);
+  background-color: hsl(var(--second-hue), 8%, 44%);
 }
 
 /*=============== BREAKPOINTS ===============*/
