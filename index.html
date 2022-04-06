@@ -73,9 +73,7 @@
         <i class="bx bxs-star change-theme" id="theme-button"></i>
       </nav>
     </header>
-    <audio autoplay loop>
-      <source src="assets/audios/motivateme.mp3" type="audio/mpeg" />
-    </audio>
+
     <!--=============== MAIN ===============-->
     <main class="main">
       <!--=============== HOME ===============-->
@@ -716,6 +714,15 @@
         </div>
       </section>
     </main>
+
+    <!-- Audio -->
+    <audio loop id="myAudio">
+      <source src="/assets/audios/motivateme.mp3" type="audio/mpeg" />
+    </audio>
+
+    <script>
+      document.getElementById("myAudio").play();
+    </script>
 
     <!--=============== FOOTER ===============-->
     <footer class="footer">
