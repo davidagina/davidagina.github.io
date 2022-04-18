@@ -416,6 +416,78 @@ img {
   margin-bottom: 2rem;
 }
 
+/*=============== QUALIFICATIONS ===============*/
+.qualification__section {
+  margin-bottom: 0;
+}
+
+.qualification__container {
+  grid-template-columns: repeat(1, 290px);
+  justify-content: center;
+}
+
+.qualification__title {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+  color: var(--first-color);
+  margin-bottom: 1.5rem;
+}
+
+.timeline__item {
+  position: relative;
+  padding-left: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+.timeline__item .last{
+  margin-bottom: 0;
+}
+
+.timeline__item::before {
+  content: "";
+  width: 1px;
+  position: absolute;
+  left: 0.48rem;
+  top: 0;
+  height: 100%;
+  background-color: var(--first-color);
+}
+
+.circle__dot {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 1rem;
+  width: 1rem;
+  border: 2px solid var(--first-color);
+  border-radius: 50%;
+  background-color: var(--first-color);
+  transition: background-color 0.3s;
+}
+
+.timeline__item:hover .circle__dot {
+  background-color: var(--body-color);
+}
+
+.timeline__title {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-meduim);
+  margin-bottom: 0.25rem;
+}
+
+.timeline__text {
+  font-size: var(--smaller-font-size);
+  margin-bottom: 0.2rem;
+}
+
+.timeline__date {
+  display: flex;
+  align-items: center;
+  column-gap: 0.4rem;
+  font-size: var(--small-font-size);
+  color: var(--first-color);
+}
+
 /*=============== SKILLS ===============*/
 
 .skills__container {
@@ -909,6 +981,12 @@ img {
     /* text-align: justify; */
   }
 
+  .qualification__container {
+    grid-template-columns: repeat(1, 320px);
+    column-gap: 3rem;
+    justify-content: center;
+  }
+
   .skills__container {
     justify-content: center;
   }
@@ -951,6 +1029,13 @@ img {
 }
 
 @media screen and (min-width: 767px) {
+
+  .qualification__container {
+    grid-template-columns: repeat(2, 340px);
+    column-gap: 3rem;
+    justify-content: center;
+  }
+
   .work__container {
     grid-template-columns: repeat(2, max-content);
   }
@@ -1030,6 +1115,13 @@ img {
     padding: 0 4rem 0 0;
     margin-bottom: 2.5rem;
   }
+
+  .qualification__container {
+    grid-template-columns: repeat(2, 340px);
+    column-gap: 3rem;
+    justify-content: center;
+  }
+  
 
   .skills__container {
     grid-template-columns: repeat(2, 350px);
