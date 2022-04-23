@@ -45,6 +45,8 @@ sr.reveal(".home__social, .home__scroll", {delay: 900, origin: "bottom"})
 
 const form = document.querySelector("form");
 const formInput = document.querySelectorAll(".contact__form-input");
+const contactHeading = document.getElementById("project");
+
 
 form.addEventListener("submit", runEvent)
 
@@ -54,4 +56,11 @@ function runEvent(){
         formInput[i].value = " ";
     }
     
+}
+
+
+formInput[0].addEventListener("keyup", displayValue);
+
+function displayValue(e){
+    contactHeading.innerText = `Hello.. ${e.target.value}`;
 }
