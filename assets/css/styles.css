@@ -973,7 +973,7 @@ img {
   }
 
   .about__info {
-    grid-template-columns: repeat(3, 140px);
+    grid-template-columns: repeat(3, 240px);
     justify-content: center;
   }
 
